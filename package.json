@@ -1,0 +1,32 @@
+{
+  "name": "multi-interaction",
+  "version": "0.0.alpha",
+  "main": "index.js",
+  "author": "Xavier Watkins<xwatkins@ebi.ac.uk>",
+  "license": "MIT",
+  "scripts": {
+    "start": "rollup -cw | browser-sync start --server --index='./public/index.html' --files='./dist/*.js,./public/*.html'",
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@types/d3": "^5.7.0",
+    "@types/d3-scale-chromatic": "^1.3.0",
+    "d3": "^5.8.0",
+    "d3-scale-chromatic": "^1.3.3",
+    "lit-element": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-typescript": "^7.1.0",
+    "@webcomponents/webcomponentsjs": "^2.2.4",
+    "browser-sync": "^2.26.3",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  }
+}
