@@ -1,35 +1,23 @@
-import { LitElement, html, property, svg } from "lit-element";
-import * as d3Select from "d3-selection";
+import { LitElement, html, svg } from "lit-element";
 import * as scale from "d3-scale";
-import * as force from "d3-force";
 import * as chromatic from "d3-scale-chromatic";
-import * as d3Drag from "d3-drag";
 import { fetchData, getJson } from "./fetchData";
 import { processData, Graph, sortData, sort } from "./processData";
+import ForceGraph from "./forceGraph";
 
 class MultiInteraction extends LitElement {
   margin = { top: 80, right: 10, bottom: 10, left: 80 };
   width = 1300;
   height = 1300;
   fontSize = 10;
+  forceGraph;
 
   colorScale = chromatic.schemeAccent;
-  nodes = [];
-  links = [];
-  node;
-  link;
-  simulation;
 
-  // @property()
+  // Properties
   proteins: string = "";
-
-  // @property()
   proteinList: string[] = [];
-
-  // @property()
   graph: Graph = new Graph();
-
-  // @property()
   sort: sort = sort.count;
 
   static get properties() {
@@ -42,6 +30,7 @@ class MultiInteraction extends LitElement {
 
   constructor() {
     super();
+    this.forceGraph = new ForceGraph(this.width);
     // this.randomize();
   }
 
@@ -131,103 +120,9 @@ class MultiInteraction extends LitElement {
     `;
   };
 
-  initForceDisplay = () => {
-    const svg = d3Select.select(this.shadowRoot.querySelector("#force-graph"));
-    // set the data and properties of link lines
-    this.link = svg
-      .append("g")
-      .selectAll("line")
-      .data(this.links)
-      .enter()
-      .append("line");
-
-    // set the data and properties of node circles
-    this.node = svg
-      .append("g")
-      .selectAll("circle")
-      .data(this.nodes)
-      .enter()
-      .append("circle");
-
-    this.node.call(
-      d3Drag
-        .drag()
-        .on("start", this.dragstarted)
-        .on("drag", this.dragged)
-        .on("end", this.dragended)
-    );
-
-    this.node.exit().remove();
-    this.link.exit().remove();
-  };
-
-  dragstarted = d => {
-    if (!d3Select.event.active) this.simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
-  };
-
-  dragged = d => {
-    d.fx = d3Select.event.x;
-    d.fy = d3Select.event.y;
-  };
-
-  dragended = d => {
-    if (!d3Select.event.active) this.simulation.alphaTarget(0.0001);
-    d.fx = null;
-    d.fy = null;
-  };
-
-  ticked = () => {
-    this.link
-      .attr("x1", function(d) {
-        return d.source.x;
-      })
-      .attr("y1", function(d) {
-        return d.source.y;
-      })
-      .attr("x2", function(d) {
-        return d.target.x;
-      })
-      .attr("y2", function(d) {
-        return d.target.y;
-      })
-      .attr("stroke", this.colorScale[2])
-      .attr("stroke-width", 1);
-
-    this.node
-      .attr("r", 5)
-      .attr("cx", function(d) {
-        return d.x;
-      })
-      .attr("cy", function(d) {
-        return d.y;
-      })
-      .attr("fill", this.colorScale[4]);
-
-    this.node.append("title").text(d => d.id);
-  };
-
-  renderForceGraph = () => {
-    return html`
-      <svg
-        id="force-graph"
-        width="${this.width + this.margin.left + this.margin.right}"
-        height="${this.height + this.margin.top + this.margin.bottom}"
-      ></svg>
-    `;
-  };
-
   updated() {
-    this.nodes = this.graph.getNodes();
-    this.links = this.graph.getEdges();
-    this.simulation = force
-      .forceSimulation(this.nodes)
-      .force("link", force.forceLink().links(this.links))
-      .force("charge", force.forceManyBody())
-      .force("center", force.forceCenter(this.width / 2, this.height / 2))
-      .on("tick", this.ticked);
-    this.initForceDisplay();
+    this.forceGraph.update(this.graph.getNodes(), this.graph.getEdges());
+    this.forceGraph.initForceDisplay(this.shadowRoot);
   }
 
   render() {
@@ -246,7 +141,7 @@ class MultiInteraction extends LitElement {
           fill: #f1f1f1;
         }
       </style>
-      ${this.renderAdjacencyGraph()} ${this.renderForceGraph()}
+      ${this.renderAdjacencyGraph()} ${this.forceGraph.renderForceGraph()}
     `;
   }
 }
