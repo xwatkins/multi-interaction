@@ -1,5 +1,10 @@
 export type AdjList = { [vertex: string]: string[] };
 
+export enum sort {
+  "count",
+  "alpha"
+}
+
 type Interactor = {
   id: string;
 };
@@ -9,7 +14,7 @@ type Entry = {
   interactions: Interactor[];
 };
 
-class Graph {
+export class Graph {
   adjList: AdjList = {};
 
   addVertex = (vertex: string) => {
@@ -30,6 +35,27 @@ class Graph {
     return this.adjList[vertex1].includes(vertex2);
   };
 
+  getNodes() {
+    return Object.keys(this.adjList).map(d => {
+      return {
+        id: d
+      };
+    });
+  }
+
+  getEdges() {
+    const nodes = Object.keys(this.adjList);
+    const edges = nodes.map((acc, i) =>
+      this.adjList[acc].map(id => {
+        return {
+          source: i,
+          target: nodes.lastIndexOf(id)
+        };
+      })
+    );
+    return edges.flat(2);
+  }
+
   printGraph = () => {
     console.log(this.adjList);
   };
@@ -48,4 +74,27 @@ const processData = (data: any[]) => {
   return graph;
 };
 
-export { processData };
+const sortData = (data: AdjList, attribute: sort) => {
+  switch (attribute) {
+    case sort.count:
+      return Object.keys(data)
+        .sort((a, b) => {
+          return data[b].length - data[a].length;
+        })
+        .reduce((a, v) => {
+          a[v] = data[v];
+          return a;
+        }, {});
+    case sort.alpha:
+      return Object.keys(data)
+        .sort()
+        .reduce((a, v) => {
+          a[v] = data[v];
+          return a;
+        }, {});
+    default:
+      return data;
+  }
+};
+
+export { processData, sortData };
