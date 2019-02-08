@@ -1,5 +1,6 @@
 import babel from "rollup-plugin-babel";
 import nodeResolve from "rollup-plugin-node-resolve";
+import pluginJson from "rollup-plugin-json";
 import path from "path";
 
 const PACKAGE_ROOT_PATH = process.cwd();
@@ -21,6 +22,7 @@ export default {
     babel({
       exclude: "node_modules/**",
       extensions: [".ts", ".js"]
-    })
+    }),
+    pluginJson()
   ]
 };

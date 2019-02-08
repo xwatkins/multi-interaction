@@ -1,0 +1,737 @@
+{
+  "requestId": "WBJB1QIHcm",
+  "hasError": false,
+  "warnings": null,
+  "offset": null,
+  "maxReturn": null,
+  "total": null,
+  "results": [
+    {
+      "accession": "P63104",
+      "proteinId": "1433Z_HUMAN",
+      "proteinName": "14-3-3 protein zeta/delta",
+      "gene": "YWHAZ",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-430116",
+          "description": "GP1b-IX-V activation signalling"
+        },
+        {
+          "primaryId": "R-HSA-5628897",
+          "description": "TP53 Regulates Metabolic Genes"
+        },
+        {
+          "primaryId": "R-HSA-3769402",
+          "description": "Deactivation of the beta-catenin transactivating complex"
+        },
+        {
+          "primaryId": "R-HSA-392517",
+          "description": "Rap1 signalling"
+        },
+        {
+          "primaryId": "R-HSA-75035",
+          "description": "Chk1/Chk2(Cds1) mediated inactivation of Cyclin B:Cdk1 complex"
+        },
+        {
+          "primaryId": "R-HSA-1445148",
+          "description": "Translocation of SLC2A4 (GLUT4) to the plasma membrane"
+        },
+        {
+          "primaryId": "R-HSA-512988",
+          "description": "Interleukin-3, Interleukin-5 and GM-CSF signaling"
+        },
+        {
+          "primaryId": "R-HSA-9604323",
+          "description": "Negative regulation of NOTCH4 signaling"
+        },
+        {
+          "primaryId": "R-HSA-450604",
+          "description": "KSRP (KHSRP) binds and destabilizes mRNA"
+        },
+        {
+          "primaryId": "R-HSA-9013700",
+          "description": "NOTCH4 Activation and Transmission of Signal to the Nucleus"
+        },
+        {
+          "primaryId": "R-HSA-5625740",
+          "description": "RHO GTPases activate PKNs"
+        },
+        {
+          "primaryId": "R-HSA-111447",
+          "description": "Activation of BAD and translocation to mitochondria"
+        }
+      ]
+    },
+    {
+      "accession": "P05067",
+      "proteinId": "A4_HUMAN",
+      "proteinName": "Amyloid-beta A4 protein",
+      "gene": "APP",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-844456",
+          "description": "The NLRP3 inflammasome"
+        },
+        {
+          "primaryId": "R-HSA-3000178",
+          "description": "ECM proteoglycans"
+        },
+        {
+          "primaryId": "R-HSA-444473",
+          "description": "Formyl peptide receptors bind formyl peptides and many other ligands"
+        },
+        {
+          "primaryId": "R-HSA-8862803",
+          "description": "Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models"
+        },
+        {
+          "primaryId": "R-HSA-418594",
+          "description": "G alpha (i) signalling events"
+        },
+        {
+          "primaryId": "R-HSA-933542",
+          "description": "TRAF6 mediated NF-kB activation"
+        },
+        {
+          "primaryId": "R-HSA-114608",
+          "description": "Platelet degranulation"
+        },
+        {
+          "primaryId": "R-HSA-432720",
+          "description": "Lysosome Vesicle Biogenesis"
+        },
+        {
+          "primaryId": "R-HSA-879415",
+          "description": "Advanced glycosylation endproduct receptor signaling"
+        },
+        {
+          "primaryId": "R-HSA-8957275",
+          "description": "Post-translational protein phosphorylation"
+        },
+        {
+          "primaryId": "R-HSA-381426",
+          "description": "Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)"
+        },
+        {
+          "primaryId": "R-HSA-445989",
+          "description": "TAK1 activates NFkB by phosphorylation and activation of IKKs complex"
+        },
+        {
+          "primaryId": "R-HSA-977225",
+          "description": "Amyloid fiber formation"
+        },
+        {
+          "primaryId": "R-HSA-416476",
+          "description": "G alpha (q) signalling events"
+        }
+      ]
+    },
+    {
+      "accession": "P31749",
+      "proteinId": "AKT1_HUMAN",
+      "proteinName": "RAC-alpha serine/threonine-protein kinase",
+      "gene": "AKT1",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-165159",
+          "description": "mTOR signalling"
+        },
+        {
+          "primaryId": "R-HSA-389513",
+          "description": "CTLA4 inhibitory signaling"
+        },
+        {
+          "primaryId": "R-HSA-8941332",
+          "description": "RUNX2 regulates genes involved in cell migration"
+        },
+        {
+          "primaryId": "R-HSA-5218920",
+          "description": "VEGFR2 mediated vascular permeability"
+        },
+        {
+          "primaryId": "R-HSA-389357",
+          "description": "CD28 dependent PI3K/Akt signaling"
+        },
+        {
+          "primaryId": "R-HSA-8948751",
+          "description": "Regulation of PTEN stability and activity"
+        },
+        {
+          "primaryId": "R-HSA-6785807",
+          "description": "Interleukin-4 and Interleukin-13 signaling"
+        },
+        {
+          "primaryId": "R-HSA-198693",
+          "description": "AKT phosphorylates targets in the nucleus"
+        },
+        {
+          "primaryId": "R-HSA-198323",
+          "description": "AKT phosphorylates targets in the cytosol"
+        },
+        {
+          "primaryId": "R-HSA-1257604",
+          "description": "PIP3 activates AKT signaling"
+        },
+        {
+          "primaryId": "R-HSA-9604323",
+          "description": "Negative regulation of NOTCH4 signaling"
+        },
+        {
+          "primaryId": "R-HSA-5628897",
+          "description": "TP53 Regulates Metabolic Genes"
+        },
+        {
+          "primaryId": "R-HSA-1474151",
+          "description": "Tetrahydrobiopterin (BH4) synthesis, recycling, salvage and regulation"
+        },
+        {
+          "primaryId": "R-HSA-6804757",
+          "description": "Regulation of TP53 Degradation"
+        },
+        {
+          "primaryId": "R-HSA-1358803",
+          "description": "Downregulation of ERBB2:ERBB3 signaling"
+        },
+        {
+          "primaryId": "R-HSA-6811558",
+          "description": "PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+        },
+        {
+          "primaryId": "R-HSA-6804758",
+          "description": "Regulation of TP53 Activity through Acetylation"
+        },
+        {
+          "primaryId": "R-HSA-392451",
+          "description": "G beta:gamma signalling through PI3Kgamma"
+        },
+        {
+          "primaryId": "R-HSA-354192",
+          "description": "Integrin alphaIIb beta3 signaling"
+        },
+        {
+          "primaryId": "R-HSA-5674400",
+          "description": "Constitutive Signaling by AKT1 E17K in Cancer"
+        },
+        {
+          "primaryId": "R-HSA-69656",
+          "description": "Cyclin A:Cdk2-associated events at S phase entry"
+        },
+        {
+          "primaryId": "R-HSA-211163",
+          "description": "AKT-mediated inactivation of FOXO1A"
+        },
+        {
+          "primaryId": "R-HSA-111447",
+          "description": "Activation of BAD and translocation to mitochondria"
+        },
+        {
+          "primaryId": "R-HSA-450604",
+          "description": "KSRP (KHSRP) binds and destabilizes mRNA"
+        },
+        {
+          "primaryId": "R-HSA-8876198",
+          "description": "RAB GEFs exchange GTP for GDP on RABs"
+        },
+        {
+          "primaryId": "R-HSA-1445148",
+          "description": "Translocation of SLC2A4 (GLUT4) to the plasma membrane"
+        },
+        {
+          "primaryId": "R-HSA-6804759",
+          "description": "Regulation of TP53 Activity through Association with Co-factors"
+        },
+        {
+          "primaryId": "R-HSA-8849469",
+          "description": "PTK6 Regulates RTKs and Their Effectors AKT1 and DOK1"
+        },
+        {
+          "primaryId": "R-HSA-203615",
+          "description": "eNOS activation"
+        },
+        {
+          "primaryId": "R-HSA-69202",
+          "description": "Cyclin E associated events during G1/S transition"
+        },
+        {
+          "primaryId": "R-HSA-450385",
+          "description": "Butyrate Response Factor 1 (BRF1) binds and destabilizes mRNA"
+        },
+        {
+          "primaryId": "R-HSA-3769402",
+          "description": "Deactivation of the beta-catenin transactivating complex"
+        },
+        {
+          "primaryId": "R-HSA-199418",
+          "description": "Negative regulation of the PI3K/AKT network"
+        }
+      ]
+    },
+    {
+      "accession": "Q06481",
+      "proteinId": "APLP2_HUMAN",
+      "proteinName": "Amyloid-like protein 2",
+      "gene": "APLP2",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-381426",
+          "description": "Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)"
+        },
+        {
+          "primaryId": "R-HSA-114608",
+          "description": "Platelet degranulation"
+        },
+        {
+          "primaryId": "R-HSA-8957275",
+          "description": "Post-translational protein phosphorylation"
+        }
+      ]
+    },
+    {
+      "accession": "P02649",
+      "proteinId": "APOE_HUMAN",
+      "proteinName": "Apolipoprotein E",
+      "gene": "APOE",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-8964058",
+          "description": "HDL remodeling"
+        },
+        {
+          "primaryId": "R-HSA-8963901",
+          "description": "Chylomicron remodeling"
+        },
+        {
+          "primaryId": "R-HSA-8957275",
+          "description": "Post-translational protein phosphorylation"
+        },
+        {
+          "primaryId": "R-HSA-8963888",
+          "description": "Chylomicron assembly"
+        },
+        {
+          "primaryId": "R-HSA-3000480",
+          "description": "Scavenging by Class A Receptors"
+        },
+        {
+          "primaryId": "R-HSA-381426",
+          "description": "Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)"
+        },
+        {
+          "primaryId": "R-HSA-8964026",
+          "description": "Chylomicron clearance"
+        },
+        {
+          "primaryId": "R-HSA-8864260",
+          "description": "Transcriptional regulation by the AP-2 (TFAP2) family of transcription factors"
+        },
+        {
+          "primaryId": "R-HSA-975634",
+          "description": "Retinoid metabolism and transport"
+        }
+      ]
+    },
+    {
+      "accession": "Q13625",
+      "proteinId": "ASPP2_HUMAN",
+      "proteinName": "Apoptosis-stimulating of p53 protein 2",
+      "gene": "TP53BP2",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-6803205",
+          "description": "TP53 regulates transcription of several additional cell death genes whose specific roles in p53-dependent apoptosis remain uncertain"
+        },
+        {
+          "primaryId": "R-HSA-6804759",
+          "description": "Regulation of TP53 Activity through Association with Co-factors"
+        },
+        {
+          "primaryId": "R-HSA-6803211",
+          "description": "TP53 Regulates Transcription of Death Receptors and Ligands"
+        },
+        {
+          "primaryId": "R-HSA-139915",
+          "description": "Activation of PUMA and translocation to mitochondria"
+        },
+        {
+          "primaryId": "R-HSA-6803204",
+          "description": "TP53 Regulates Transcription of Genes Involved in Cytochrome C Release"
+        }
+      ]
+    },
+    {
+      "accession": "O00429",
+      "proteinId": "DNM1L_HUMAN",
+      "proteinName": "Dynamin-1-like protein",
+      "gene": "DNM1L",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-75153",
+          "description": "Apoptotic execution phase"
+        }
+      ]
+    },
+    {
+      "accession": "P49841",
+      "proteinId": "GSK3B_HUMAN",
+      "proteinName": "Glycogen synthase kinase-3 beta",
+      "gene": "GSK3B",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-5674400",
+          "description": "Constitutive Signaling by AKT1 E17K in Cancer"
+        },
+        {
+          "primaryId": "R-HSA-5467348",
+          "description": "Truncations of AMER1 destabilize the destruction complex"
+        },
+        {
+          "primaryId": "R-HSA-5610783",
+          "description": "Degradation of GLI2 by the proteasome"
+        },
+        {
+          "primaryId": "R-HSA-399956",
+          "description": "CRMPs in Sema3A signaling"
+        },
+        {
+          "primaryId": "R-HSA-3371453",
+          "description": "Regulation of HSF1-mediated heat shock response"
+        },
+        {
+          "primaryId": "R-HSA-195253",
+          "description": "Degradation of beta-catenin by the destruction complex"
+        },
+        {
+          "primaryId": "R-HSA-5358751",
+          "description": "S45 mutants of beta-catenin aren't phosphorylated"
+        },
+        {
+          "primaryId": "R-HSA-5358747",
+          "description": "S33 mutants of beta-catenin aren't phosphorylated"
+        },
+        {
+          "primaryId": "R-HSA-5467340",
+          "description": "AXIN missense mutants destabilize the destruction complex"
+        },
+        {
+          "primaryId": "R-HSA-4641262",
+          "description": "Disassembly of the destruction complex and recruitment of AXIN to the membrane"
+        },
+        {
+          "primaryId": "R-HSA-5610785",
+          "description": "GLI3 is processed to GLI3R by the proteasome"
+        },
+        {
+          "primaryId": "R-HSA-69229",
+          "description": "Ubiquitin-dependent degradation of Cyclin D1"
+        },
+        {
+          "primaryId": "R-HSA-5339716",
+          "description": "Misspliced GSK3beta mutants stabilize beta-catenin"
+        },
+        {
+          "primaryId": "R-HSA-5467337",
+          "description": "APC truncation mutants have impaired AXIN binding"
+        },
+        {
+          "primaryId": "R-HSA-198323",
+          "description": "AKT phosphorylates targets in the cytosol"
+        },
+        {
+          "primaryId": "R-HSA-5358752",
+          "description": "T41 mutants of beta-catenin aren't phosphorylated"
+        },
+        {
+          "primaryId": "R-HSA-8939902",
+          "description": "Regulation of RUNX2 expression and activity"
+        },
+        {
+          "primaryId": "R-HSA-196299",
+          "description": "Beta-catenin phosphorylation cascade"
+        },
+        {
+          "primaryId": "R-HSA-5358749",
+          "description": "S37 mutants of beta-catenin aren't phosphorylated"
+        },
+        {
+          "primaryId": "R-HSA-5250924",
+          "description": "B-WICH complex positively regulates rRNA expression"
+        }
+      ]
+    },
+    {
+      "accession": "P05412",
+      "proteinId": "JUN_HUMAN",
+      "proteinName": "Transcription factor AP-1",
+      "gene": "JUN",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-8943724",
+          "description": "Regulation of PTEN gene transcription"
+        },
+        {
+          "primaryId": "R-HSA-9018519",
+          "description": "Estrogen-dependent gene expression"
+        },
+        {
+          "primaryId": "R-HSA-8862803",
+          "description": "Deregulated CDK5 triggers multiple neurodegenerative pathways in Alzheimer's disease models"
+        },
+        {
+          "primaryId": "R-HSA-2871796",
+          "description": "FCERI mediated MAPK activation"
+        },
+        {
+          "primaryId": "R-HSA-5687128",
+          "description": "MAPK6/MAPK4 signaling"
+        },
+        {
+          "primaryId": "R-HSA-6796648",
+          "description": "TP53 Regulates Transcription of DNA Repair Genes"
+        },
+        {
+          "primaryId": "R-HSA-5617472",
+          "description": "Activation of anterior HOX genes in hindbrain development during early embryogenesis"
+        },
+        {
+          "primaryId": "R-HSA-1912408",
+          "description": "Pre-NOTCH Transcription and Translation"
+        },
+        {
+          "primaryId": "R-HSA-2559580",
+          "description": "Oxidative Stress Induced Senescence"
+        },
+        {
+          "primaryId": "R-HSA-2559582",
+          "description": "Senescence-Associated Secretory Phenotype (SASP)"
+        },
+        {
+          "primaryId": "R-HSA-450341",
+          "description": "Activation of the AP-1 family of transcription factors"
+        }
+      ]
+    },
+    {
+      "accession": "Q5S007",
+      "proteinId": "LRRK2_HUMAN",
+      "proteinName": "Leucine-rich repeat serine/threonine-protein kinase 2",
+      "gene": "LRRK2",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-8857538",
+          "description": "PTK6 promotes HIF1A stabilization"
+        }
+      ]
+    },
+    {
+      "accession": "O15294",
+      "proteinId": "OGT1_HUMAN",
+      "proteinName": "UDP-N-acetylglucosamine--peptide N-acetylglucosaminyltransferase 110 kDa subunit",
+      "gene": "OGT",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-5689603",
+          "description": "UCH proteinases"
+        },
+        {
+          "primaryId": "R-HSA-3214847",
+          "description": "HATs acetylate histones"
+        }
+      ]
+    },
+    {
+      "accession": "P04156",
+      "proteinId": "PRIO_HUMAN",
+      "proteinName": "Major prion protein",
+      "gene": "PRNP",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-419037",
+          "description": "NCAM1 interactions"
+        }
+      ]
+    },
+    {
+      "accession": "P49768",
+      "proteinId": "PSN1_HUMAN",
+      "proteinName": "Presenilin-1",
+      "gene": "PSEN1",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-6798695",
+          "description": "Neutrophil degranulation"
+        },
+        {
+          "primaryId": "R-HSA-1474228",
+          "description": "Degradation of the extracellular matrix"
+        },
+        {
+          "primaryId": "R-HSA-3928665",
+          "description": "EPH-ephrin mediated repulsion of cells"
+        },
+        {
+          "primaryId": "R-HSA-9013507",
+          "description": "NOTCH3 Activation and Transmission of Signal to the Nucleus"
+        },
+        {
+          "primaryId": "R-HSA-9013700",
+          "description": "NOTCH4 Activation and Transmission of Signal to the Nucleus"
+        },
+        {
+          "primaryId": "R-HSA-9017802",
+          "description": "Noncanonical activation of NOTCH3"
+        },
+        {
+          "primaryId": "R-HSA-193692",
+          "description": "Regulated proteolysis of p75NTR"
+        },
+        {
+          "primaryId": "R-HSA-2979096",
+          "description": "NOTCH2 Activation and Transmission of Signal to the Nucleus"
+        },
+        {
+          "primaryId": "R-HSA-2122948",
+          "description": "Activated NOTCH1 Transmits Signal to the Nucleus"
+        },
+        {
+          "primaryId": "R-HSA-1251985",
+          "description": "Nuclear signaling by ERBB4"
+        },
+        {
+          "primaryId": "R-HSA-2644606",
+          "description": "Constitutive Signaling by NOTCH1 PEST Domain Mutants"
+        },
+        {
+          "primaryId": "R-HSA-2894862",
+          "description": "Constitutive Signaling by NOTCH1 HD+PEST Domain Mutants"
+        },
+        {
+          "primaryId": "R-HSA-205043",
+          "description": "NRIF signals cell death from the nucleus"
+        }
+      ]
+    },
+    {
+      "accession": "P37840",
+      "proteinId": "SYUA_HUMAN",
+      "proteinName": "Alpha-synuclein",
+      "gene": "SNCA",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-977225",
+          "description": "Amyloid fiber formation"
+        }
+      ]
+    },
+    {
+      "accession": "P10636",
+      "proteinId": "TAU_HUMAN",
+      "proteinName": "Microtubule-associated protein tau",
+      "gene": "MAPT",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-264870",
+          "description": "Caspase-mediated cleavage of cytoskeletal proteins"
+        }
+      ]
+    },
+    {
+      "accession": "Q04206",
+      "proteinId": "TF65_HUMAN",
+      "proteinName": "Transcription factor p65",
+      "gene": "RELA",
+      "pathways": [
+        {
+          "primaryId": "R-HSA-381340",
+          "description": "Transcriptional regulation of white adipocyte differentiation"
+        },
+        {
+          "primaryId": "R-HSA-933542",
+          "description": "TRAF6 mediated NF-kB activation"
+        },
+        {
+          "primaryId": "R-HSA-209560",
+          "description": "NF-kB is activated and signals survival"
+        },
+        {
+          "primaryId": "R-HSA-844456",
+          "description": "The NLRP3 inflammasome"
+        },
+        {
+          "primaryId": "R-HSA-5607761",
+          "description": "Dectin-1 mediated noncanonical NF-kB signaling"
+        },
+        {
+          "primaryId": "R-HSA-445989",
+          "description": "TAK1 activates NFkB by phosphorylation and activation of IKKs complex"
+        },
+        {
+          "primaryId": "R-HSA-5660668",
+          "description": "CLEC7A/inflammasome pathway"
+        },
+        {
+          "primaryId": "R-HSA-3214841",
+          "description": "PKMTs methylate histone lysines"
+        },
+        {
+          "primaryId": "R-HSA-1810476",
+          "description": "RIP-mediated NFkB activation via ZBP1"
+        },
+        {
+          "primaryId": "R-HSA-5621575",
+          "description": "CD209 (DC-SIGN) signaling"
+        },
+        {
+          "primaryId": "R-HSA-202424",
+          "description": "Downstream TCR signaling"
+        },
+        {
+          "primaryId": "R-HSA-1169091",
+          "description": "Activation of NF-kappaB in B cells"
+        },
+        {
+          "primaryId": "R-HSA-5603029",
+          "description": "IkBA variant leads to EDA-ID"
+        },
+        {
+          "primaryId": "R-HSA-193692",
+          "description": "Regulated proteolysis of p75NTR"
+        },
+        {
+          "primaryId": "R-HSA-2871837",
+          "description": "FCERI mediated NF-kB activation"
+        },
+        {
+          "primaryId": "R-HSA-9020702",
+          "description": "Interleukin-1 signaling"
+        },
+        {
+          "primaryId": "R-HSA-4755510",
+          "description": "SUMOylation of immune response proteins"
+        },
+        {
+          "primaryId": "R-HSA-5607764",
+          "description": "CLEC7A (Dectin-1) signaling"
+        },
+        {
+          "primaryId": "R-HSA-448706",
+          "description": "Interleukin-1 processing"
+        },
+        {
+          "primaryId": "R-HSA-3134963",
+          "description": "DEx/H-box helicases activate type I IFN and inflammatory cytokines production"
+        },
+        {
+          "primaryId": "R-HSA-2559582",
+          "description": "Senescence-Associated Secretory Phenotype (SASP)"
+        }
+      ]
+    },
+    {
+      "accession": "P21980",
+      "proteinId": "TGM2_HUMAN",
+      "proteinName": "Protein-glutamine gamma-glutamyltransferase 2",
+      "gene": "TGM2",
+      "pathways": []
+    }
+  ]
+}

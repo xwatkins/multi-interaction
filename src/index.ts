@@ -4,13 +4,20 @@ import * as chromatic from "d3-scale-chromatic";
 import { fetchData, getJson } from "./fetchData";
 import { processData, Graph, sortData, sort } from "./processData";
 import ForceGraph from "./forceGraph";
+import "./sideGraphComponent";
+import { SideGraphType, SideGraphOrientation } from "./sideGraphComponent";
+
+enum Visualisation {
+  force,
+  adjacency
+}
 
 class MultiInteraction extends LitElement {
-  margin = { top: 80, right: 10, bottom: 10, left: 80 };
-  width = 1300;
-  height = 1300;
+  width = 1000;
+  height = 1000;
+  margin = 100;
   fontSize = 10;
-  forceGraph;
+  forceGraph: ForceGraph;
 
   colorScale = chromatic.schemeAccent;
 
@@ -19,19 +26,20 @@ class MultiInteraction extends LitElement {
   proteinList: string[] = [];
   graph: Graph = new Graph();
   sort: sort = sort.count;
+  visualisation: Visualisation = Visualisation.force;
 
   static get properties() {
     return {
       proteins: { type: String },
       graph: {},
-      sort: {}
+      sort: {},
+      visualisation: {}
     };
   }
 
   constructor() {
     super();
     this.forceGraph = new ForceGraph(this.width);
-    // this.randomize();
   }
 
   async connectedCallback() {
@@ -44,11 +52,8 @@ class MultiInteraction extends LitElement {
     }
   }
 
-  randomize = () => {
-    setTimeout(() => {
-      this.sort = sort[this.sort + 1] ? this.sort + 1 : this.sort - 1;
-      this.randomize();
-    }, 5000);
+  changeSortOrder = () => {
+    this.sort = sort[this.sort + 1] ? this.sort + 1 : this.sort - 1;
   };
 
   getColor = (accession: string, interactor?: string) => {
@@ -78,19 +83,40 @@ class MultiInteraction extends LitElement {
       .domain(Object.keys(sortedList));
 
     return html`
-      <svg
-        width="${this.width + this.margin.left + this.margin.right}"
-        height="${this.height + this.margin.top + this.margin.bottom}"
-        id="adjacency-graph"
-      >
-        <g transform="translate(${this.margin.left},${this.margin.top})">
-          <rect
-            class="background"
+      <div class="adjacency-grid">
+        <div></div>
+        <div>
+          <side-graph-component
+            size="${this.width}"
+            width="${this.margin}"
+            proteins="${Object.keys(sortedList).join(",")}"
+            type="${SideGraphType.diseases}"
+            orientation="${SideGraphOrientation.horizontal}"
+          ></side-graph-component>
+        </div>
+        <div>
+          <side-graph-component
+            size="${this.width}"
+            width="${this.margin}"
+            proteins="${Object.keys(sortedList).join(",")}"
+            type="${SideGraphType.pathways}"
+            orientation="${SideGraphOrientation.vertical}"
+          ></side-graph-component>
+        </div>
+        <div>
+          <svg
             width="${this.width}"
             height="${this.height}"
-          />
-          ${Object.keys(sortedList).map(item => {
-            return svg`
+            id="adjacency-graph"
+          >
+            <g>
+              <rect
+                class="background"
+                width="${this.width}"
+                height="${this.height}"
+              />
+              ${Object.keys(sortedList).map(item => {
+                return svg`
             <g transform="translate(0, ${x(item)})">
               <line x2="${this.width}"></line>
               ${sortedList[item].map(interactor => {
@@ -98,7 +124,7 @@ class MultiInteraction extends LitElement {
                   interactor
                 )}" width="${x.bandwidth()}" height="${x.bandwidth()}"
                 style="fill: ${this.getColor(item, interactor)}"
-                />`;
+                ><title>${item}:${interactor}</title></rect>`;
               })}
               <text class="axis" dy=".65em" text-anchor="end" style="display:${
                 this.fontSize <= x.bandwidth() ? "block" : "none"
@@ -114,9 +140,11 @@ class MultiInteraction extends LitElement {
           >
             </g>
             `;
-          })}
-        </g>
-      </svg>
+              })}
+            </g>
+          </svg>
+        </div>
+      </div>
     `;
   };
 
@@ -140,10 +168,37 @@ class MultiInteraction extends LitElement {
         .background {
           fill: #f1f1f1;
         }
+        .adjacency-grid {
+          margin-top: 2em;
+          display: grid;
+          grid-template-columns: ${this.margin}px ${this.width}px;
+        }
       </style>
-      ${this.renderAdjacencyGraph()} ${this.forceGraph.renderForceGraph()}
+      <div>
+        <button @click="${e => this.handleSwitchClick(Visualisation.force)}">
+          Force directed graph
+        </button>
+        <button
+          @click="${e => this.handleSwitchClick(Visualisation.adjacency)}"
+        >
+          Adjacency graph
+        </button>
+        <button @click="${this.changeSortOrder}">Change sort</button>
+      </div>
+      <div>
+        ${this.visualisation === Visualisation.adjacency
+          ? this.renderAdjacencyGraph()
+          : ""}
+        ${this.visualisation === Visualisation.force
+          ? this.forceGraph.renderForceGraph()
+          : ""}
+      </div>
     `;
   }
+
+  handleSwitchClick = (type: Visualisation) => {
+    this.visualisation = type;
+  };
 }
 
 customElements.define("multi-interaction", MultiInteraction);
